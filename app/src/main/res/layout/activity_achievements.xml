@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="20dp"
+    tools:context=".achievements.AchievementsActivity">
+
+    <TextView
+        android:id="@+id/tvAchievementsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:fontFamily="sans-serif-condensed"
+        android:letterSpacing="0.12"
+        android:shadowColor="#00D4FF"
+        android:shadowRadius="20"
+        android:text="SYSTEM ACHIEVEMENTS"
+        android:textColor="#00D4FF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/achievementsScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvAchievementsTitle"
+        android:layout_above="@id/scrollAssistPanel"
+        android:layout_marginTop="20dp"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/achievementsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/paginationPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnBackAchievements"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPrevPage"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_background"
+            android:text="◀"
+            android:textColor="#00D4FF"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPageIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:fontFamily="sans-serif-condensed"
+            android:shadowColor="#00D4FF"
+            android:shadowRadius="10"
+            android:text="1 / 1"
+            android:textColor="#00D4FF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnNextPage"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_background"
+            android:text="▶"
+            android:textColor="#00D4FF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scrollAssistPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/paginationPanel"
+        android:layout_marginBottom="8dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnScrollUp"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/card_background"
+            android:text="▲"
+            android:textColor="#00D4FF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnScrollDown"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/card_background"
+            android:text="▼"
+            android:textColor="#00D4FF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnBackAchievements"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="#00D4FF"
+        android:text="Enter System"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+

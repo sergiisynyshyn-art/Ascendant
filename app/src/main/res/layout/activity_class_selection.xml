@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:fillViewport="true"
+    tools:context=".classselection.ClassSelectionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+            android:text="CHOOSE YOUR CLASS"
+            android:textColor="#00D4FF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.15"
+            android:shadowColor="#00D4FF"
+            android:shadowRadius="20"
+            android:fontFamily="sans-serif-condensed"
+            android:alpha="0"
+            tools:alpha="1" />
+
+        <LinearLayout
+            android:id="@+id/warriorCard"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/card_background"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:gravity="center_vertical"
+            android:alpha="0"
+            tools:alpha="1">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="⚔"
+                android:textSize="36sp"
+                android:gravity="center"
+                android:textColor="#00D4FF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WARRIOR"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/assassinCard"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/card_background"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:gravity="center_vertical"
+            android:alpha="0"
+            tools:alpha="1">
+
+            <!-- ...existing code... -->
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="🗡"
+                android:textSize="36sp"
+                android:gravity="center"
+                android:textColor="#00D4FF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ASSASSIN"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mageCard"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/card_background"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:gravity="center_vertical"
+            android:alpha="0"
+            tools:alpha="1">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="🔮"
+                android:textSize="36sp"
+                android:gravity="center"
+                android:textColor="#00D4FF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MAGE"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tankCard"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/card_background"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:gravity="center_vertical"
+            android:alpha="0"
+            tools:alpha="1">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="🛡"
+                android:textSize="36sp"
+                android:gravity="center"
+                android:textColor="#00D4FF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TANK"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/supportCard"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/card_background"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:gravity="center_vertical"
+            android:alpha="0"
+            tools:alpha="1">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="✚"
+                android:textSize="36sp"
+                android:gravity="center"
+                android:textColor="#00D4FF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUPPORT"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="20dp"
+            android:text="CONFIRM CLASS"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:background="#00D4FF"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</ScrollView>

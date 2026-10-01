@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ascendant">
+        <activity
+            android:name=".deadlines.CriticalDeadlineActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen" />
+
+        <receiver
+            android:name=".deadlines.DailyDeadlineReceiver"
+            android:exported="false" />
+
+        <receiver
+            android:name=".deadlines.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".preintro.PreIntroActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".intro.IntroActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen" />
+
+        <activity
+            android:name=".confirmation.ConfirmationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen" />
+
+        <activity
+            android:name=".nickname.NicknameActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen" />
+
+        <activity
+            android:name=".classselection.ClassSelectionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen" />
+
+        <activity
+            android:name=".finalmessage.FinalMessageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen" />
+
+        <activity
+            android:name=".welcome.WelcomeBackActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen" />
+
+        <activity
+            android:name=".missions.MissionsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen" />
+
+        <activity
+            android:name=".missionscomplete.MissionCompleteVideoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen" />
+
+        <activity
+            android:name=".missionscomplete.MissionCompleteFrameActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen" />
+
+        <activity
+            android:name=".steps.StepCounterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen" />
+
+        <activity
+            android:name=".achievements.AchievementsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen" />
+
+        <activity
+            android:name=".achievements.AchievementUnlockedActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen" />
+
+        <activity
+            android:name=".progress.ProgressActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen" />
+
+        <activity
+            android:name=".advancedclass.AdvancedClassUnlockedActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ascendant.Fullscreen" />
+    </application>
+
+</manifest>

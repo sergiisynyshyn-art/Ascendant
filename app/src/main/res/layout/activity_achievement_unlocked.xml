@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="28dp"
+    tools:context=".achievements.AchievementUnlockedActivity">
+
+    <LinearLayout
+        android:id="@+id/achievementFramePanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/step_panel_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvUnlockedTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:letterSpacing="0.07"
+            android:shadowColor="#00D4FF"
+            android:shadowRadius="20"
+            android:text="Logro desbloqueado:"
+            android:textColor="#00D4FF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:alpha="1" />
+
+        <TextView
+            android:id="@+id/tvUnlockedName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:alpha="0"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="Primer Despertar"
+            android:textColor="#C9EEFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:alpha="1" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnContinueSystem"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="56dp"
+        android:alpha="0"
+        android:background="#00D4FF"
+        android:text="Continuar"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        tools:alpha="1" />
+
+</RelativeLayout>
+

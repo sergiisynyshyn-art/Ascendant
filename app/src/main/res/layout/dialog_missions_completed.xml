@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#000000"
+    android:padding="32dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/completionMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MISIONES COMPLETADAS\n\nTU NIVEL HA AUMENTADO"
+        android:textColor="#00D4FF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:letterSpacing="0.1"
+        android:gravity="center"
+        android:shadowColor="#00D4FF"
+        android:shadowRadius="20"
+        android:alpha="0" />
+
+</LinearLayout>
+

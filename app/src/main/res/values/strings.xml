@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Ascendant</string>
+    <string name="level_format">Nivel %1$d/%2$d</string>
+    <string name="missions_done_label">Misiones hechas</string>
+    <string name="missions_done_locked_label">Completadas hasta 00:00</string>
+    <string name="welcome_back_format">Bienvenido de nuevo, %1$s</string>
+    <string name="welcome_entering_system">Entrando al Sistema...</string>
+
+    <!-- Progress Screen -->
+    <string name="progress_title">ESTADO DEL PROGRESO</string>
+    <string name="progress_last_7_days">Últimos 7 días</string>
+    <string name="progress_total_accumulated">Total Acumulado</string>
+    <string name="btn_back">VOLVER</string>
+    <string name="progress_unit_reps">reps</string>
+    <string name="progress_unit_min">min</string>
+    <string name="progress_unit_steps">pasos</string>
+    <string name="progress_value_format">%1$d %2$s</string>
+    <string name="icon_back">‹</string>
+    <string name="icon_progress">📊</string>
+    <string name="main_progress_label">PROGRESO</string>
+    <string name="main_progress_description">Estadísticas acumuladas</string>
+</resources>

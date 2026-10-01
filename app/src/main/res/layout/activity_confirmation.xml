@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".confirmation.ConfirmationActivity">
+
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="ARE YOU SURE TO\nENTER THIS SYSTEM?"
+        android:textColor="#00D4FF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:letterSpacing="0.1"
+        android:shadowColor="#00D4FF"
+        android:shadowRadius="25"
+        android:fontFamily="sans-serif-condensed"
+        android:alpha="0"
+        tools:alpha="1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/questionText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnYes"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="YES"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:background="#00D4FF"
+            android:layout_marginEnd="20dp"
+            android:alpha="0"
+            tools:alpha="1" />
+
+        <Button
+            android:id="@+id/btnNo"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="NO"
+            android:textColor="#00D4FF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:background="@drawable/button_border"
+            android:alpha="0"
+            tools:alpha="1" />
+
+    </LinearLayout>
+
+</RelativeLayout>

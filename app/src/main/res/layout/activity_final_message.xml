@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="30dp"
+    tools:context=".finalmessage.FinalMessageActivity">
+
+    <TextView
+        android:id="@+id/messageText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="You have entered a system where every decision matters.\n\nComplete your missions.\n\nDo not fail."
+        android:textColor="#00D4FF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:lineSpacingExtra="8dp"
+        android:letterSpacing="0.08"
+        android:shadowColor="#00D4FF"
+        android:shadowRadius="20"
+        android:fontFamily="sans-serif-condensed"
+        android:alpha="0"
+        tools:alpha="1" />
+
+    <Button
+        android:id="@+id/btnEnter"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:text="ENTER SYSTEM"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:background="#00D4FF"
+        android:alpha="0"
+        tools:alpha="1" />
+
+</RelativeLayout>

@@ -1,107 +1,243 @@
-# Solo Leveling App
+# Ascendant
 
-Aplicación Android inspirada en el universo de Solo Leveling, centrada en una experiencia visual inmersiva basada en animaciones, vídeo introductorio y una estética oscura inspirada en el sistema de sombras.
+Ascendant es una aplicación Android de desarrollo personal y construcción de hábitos que transforma el progreso diario en una experiencia gamificada.
 
-## 📱 Descripción
-
-Este proyecto tiene como objetivo crear una aplicación Android temática de Solo Leveling con una pantalla de introducción cinematográfica antes de acceder a la aplicación principal.
-
-Actualmente se encuentra en fase de desarrollo inicial, centrándose en la creación de una experiencia de bienvenida visual atractiva mediante la reproducción de un vídeo introductorio personalizado.
+La aplicación combina misiones, niveles, logros, seguimiento de actividad física y un sistema de progresión inspirado en los RPG para ayudar al usuario a desarrollar disciplina y constancia en sus objetivos personales.
 
 ---
 
-## ✅ Funcionalidades implementadas
+## Características principales
 
-### Intro animada
-- Pantalla de inicio personalizada.
-- Reproducción automática de vídeo al arrancar la aplicación.
-- Introducción inspirada en la estética oscura de Solo Leveling.
-- Integración de recursos de vídeo directamente dentro del proyecto Android. 【1-aad091】
+### Onboarding inmersivo
+- Flujo completo de bienvenida.
+- Introducción guiada al sistema.
+- Registro de apodo del usuario.
+- Selección de clase o identidad inicial.
+- Configuración personalizada del perfil.
 
-### Recursos multimedia
-- Incorporación del archivo:
+### Sistema de progresión
+- Sistema de niveles.
+- Experiencia acumulada mediante actividad diaria.
+- Evolución continua del usuario.
+- Representación visual del progreso.
 
-```
-app/src/main/res/raw/intro.mp4
-```
+### Misiones diarias
+- Creación y gestión de objetivos diarios.
+- Control de deadlines.
+- Reinicio automático de ciclos diarios.
+- Seguimiento del cumplimiento de tareas.
+- Recordatorios programados.
 
-como recurso local para la intro de la aplicación. 【1-aad091】
+### Seguimiento de actividad física
+- Integración con sensores de pasos del dispositivo.
+- Registro automático de actividad.
+- Acumulación de progreso basada en movimiento real.
+- Persistencia local de estadísticas.
 
-### Diseño visual
-- Creación y edición de clips de vídeo para la pantalla inicial. 【2-15e956】【3-d8e868】
-- Pruebas visuales con imágenes de temática oscura y efectos inspirados en sombras. 【4-efbeb4】【5-406ac5】【6-49983e】【7-94cdc0】
-- Integración de material inspirado en el tráiler oficial para referencias visuales. 【8-750145】
+### Sistema de logros
+- Desbloqueo de hitos y recompensas.
+- Seguimiento del progreso histórico.
+- Almacenamiento permanente de logros obtenidos.
+
+### Notificaciones y automatización
+- Alarmas programadas.
+- Recordatorios diarios.
+- Actualización automática de estados y misiones.
+- Mantenimiento del ciclo de progresión incluso entre sesiones.
 
 ---
 
-## 🛠 Tecnologías utilizadas
+## Tecnologías utilizadas
 
-- Android Studio
-- Android SDK
-- Gradle
-- VideoView / MediaPlayer
-- Java / Kotlin
+- Android Native (Java)
+- AndroidX
+- AppCompat
+- Material Design Components
+- SQLite
+- AlarmManager
+- Broadcast Receivers
+- Sensores de hardware Android
+- SharedPreferences
+- Android Notification System
 
 ---
 
-## 📂 Estructura actual
+## Arquitectura
+
+La aplicación está organizada en módulos centrados en la experiencia del usuario y la persistencia local de datos.
+
+### Componentes principales
+
+- Onboarding
+- Sistema de clases
+- Gestión de misiones
+- Seguimiento de pasos
+- Sistema de logros
+- Gestión de niveles
+- Persistencia SQLite
+- Notificaciones y recordatorios
+
+---
+
+## Estructura del proyecto
 
 ```text
 app/
-└── src/
-    └── main/
-        ├── java/
-        ├── res/
-        │   ├── drawable/
-        │   ├── mipmap/
-        │   ├── raw/
-        │   │   └── intro.mp4
-        │   ├── values/
-        │   └── xml/
-        └── AndroidManifest.xml
+├── src/
+│   └── main/
+│       ├── java/com/example/ascendant/
+│       ├── res/
+│       │   ├── drawable/
+│       │   ├── layout/
+│       │   ├── mipmap/
+│       │   ├── values/
+│       │   └── xml/
+│       └── AndroidManifest.xml
+│
+└── build.gradle.kts
 ```
 
 ---
 
-## 🚀 Próximas mejoras
+## Flujo principal
 
-- [ ] Finalizar IntroActivity.
-- [ ] Mejorar la transición entre la intro y la pantalla principal.
-- [ ] Añadir animaciones adicionales.
-- [ ] Crear menú principal.
-- [ ] Implementar navegación interna.
-- [ ] Añadir sistema de progresión inspirado en Solo Leveling.
-- [ ] Optimizar rendimiento multimedia.
-- [ ] Preparar primera versión MVP.
+La experiencia del usuario sigue el siguiente recorrido:
+
+```text
+PreIntroActivity
+        │
+        ▼
+Introducción
+        │
+        ▼
+Confirmación de inicio
+        │
+        ▼
+Creación de apodo
+        │
+        ▼
+Selección de clase
+        │
+        ▼
+MainActivity
+        │
+ ┌──────┼──────┐
+ ▼      ▼      ▼
+Misiones Logros Progreso
+```
 
 ---
 
-## ⚙️ Instalación
+## Persistencia de datos
 
-Clona el repositorio:
+La aplicación almacena localmente:
+
+- Nivel actual.
+- Experiencia acumulada.
+- Misiones activas.
+- Historial de progreso.
+- Pasos registrados.
+- Logros desbloqueados.
+- Configuración del usuario.
+
+Toda la información se conserva entre sesiones mediante SQLite y almacenamiento local del dispositivo.
+
+---
+
+## Requisitos
+
+### Desarrollo
+
+- Android Studio
+- JDK 11
+- Android SDK
+
+### Ejecución
+
+- Android 10 (API 29) o superior
+- Permisos de actividad física
+- Permisos de notificaciones
+
+---
+
+## Instalación
+
+Clonar el repositorio:
 
 ```bash
-git clone https://github.com/TU-USUARIO/TU-REPOSITORIO.git
+git clone https://github.com/TU-USUARIO/ascendant.git
 ```
 
-Abre el proyecto en Android Studio.
+Abrir el proyecto:
 
-Sincroniza Gradle.
+```bash
+cd ascendant
+```
 
-Ejecuta la aplicación en un emulador o dispositivo Android.
-
----
-
-## 📌 Estado del proyecto
-
-Versión inicial en desarrollo.
-
-Actualmente el foco principal está en la experiencia de introducción y la integración de recursos multimedia antes de comenzar la implementación de las funcionalidades principales.
+Abrir la carpeta en Android Studio y sincronizar Gradle.
 
 ---
 
-## 👨‍💻 Autor
+## Comandos útiles
 
-**Serhii Synyshyn**
+Compilar versión Debug:
 
-Proyecto personal desarrollado para aprendizaje, experimentación y desarrollo de aplicaciones Android inspiradas en el universo de Solo Leveling.
+```bash
+./gradlew assembleDebug
+```
+
+Ejecutar tests:
+
+```bash
+./gradlew test
+```
+
+Analizar código:
+
+```bash
+./gradlew lint
+```
+
+Generar APK:
+
+```bash
+./gradlew assembleRelease
+```
+
+---
+
+## Roadmap
+
+### v0.1
+- ✅ Onboarding completo
+- ✅ Sistema de niveles
+- ✅ Seguimiento de pasos
+- ✅ Logros
+- ✅ Persistencia SQLite
+
+### v0.2
+- ⏳ Estadísticas avanzadas
+- ⏳ Mejoras visuales
+- ⏳ Nuevos tipos de misiones
+
+### v1.0
+- ⏳ Sistema completo de progresión
+- ⏳ Personalización avanzada
+- ⏳ Dashboard de evolución
+- ⏳ Experiencia gamificada completa
+
+---
+
+## Filosofía del proyecto
+
+Ascendant no se centra únicamente en registrar hábitos, sino en transformar el progreso personal en una experiencia motivadora mediante sistemas de progresión, objetivos y recompensas inspirados en videojuegos RPG.
+
+Cada acción realizada por el usuario contribuye a su desarrollo dentro del sistema, convirtiendo la mejora personal en una experiencia medible y visual.
+
+---
+
+## Autor
+
+Desarrollado por Serhii Synyshyn.
+
+Proyecto personal enfocado en Android nativo, gamificación, productividad y desarrollo personal.
